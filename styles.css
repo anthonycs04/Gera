@@ -2,13 +2,13 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Arial', sans-serif;
-    background: #4e44d2; /* Fondo degradado */
     background: linear-gradient(135deg, #4e44d2, #9b59b6);
     height: 100vh;
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 #particles-js {
@@ -16,7 +16,7 @@ body {
     width: 100%;
     height: 100%;
     background: transparent;
-    z-index: -1; /* Para que las partículas estén por detrás de los elementos */
+    z-index: -1;
 }
 
 .container {
@@ -27,24 +27,29 @@ body {
     padding: 20px;
     border-radius: 15px;
     background: rgba(0, 0, 0, 0.6);
+    width: 90%;
+    max-width: 800px; /* Evita que se haga demasiado grande en pantallas grandes */
 }
 
 h1 {
-    font-size: 4em;
-    margin-bottom: 20px;
+    font-size: 3em;
+    margin-bottom: 15px;
     font-family: 'Cursive', sans-serif;
     animation: fadeIn 1.5s ease-in-out;
 }
 
+/* Galería */
 .gallery {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 15px;
     transition: transform 0.5s ease-in-out;
+    flex-wrap: wrap; /* Permite que las imágenes se acomoden en móviles */
 }
 
 .gallery img {
-    width: 250px;
+    width: 100%;
+    max-width: 250px; /* Para que no se estiren en pantallas grandes */
     height: auto;
     border-radius: 10px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
@@ -56,7 +61,7 @@ h1 {
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
-/* Efecto de fade-in */
+/* Animaciones */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -66,18 +71,30 @@ h1 {
     }
 }
 
-/* Efecto de parpadeo en partículas */
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-        opacity: 1;
+/* Responsividad para móviles */
+@media (max-width: 768px) {
+    body {
+        height: auto;
+        overflow-y: auto;
+        padding: 20px;
     }
-    50% {
-        transform: scale(1.5);
-        opacity: 0.7;
+
+    .container {
+        padding: 15px;
+        width: 95%;
     }
-    100% {
-        transform: scale(1);
-        opacity: 1;
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    .gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .gallery img {
+        width: 90%;
+        max-width: 300px; /* Asegura un buen tamaño en móviles */
     }
 }
