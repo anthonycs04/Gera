@@ -16,10 +16,17 @@ const archivos = [
   "WhatsApp Image 2025-04-17 at 12.48.16 AM (1).jpeg",
   "WhatsApp Image 2025-04-17 at 12.48.16 AM (2).jpeg",
   "WhatsApp Image 2025-04-17 at 12.48.16 AM.jpeg",
+  "WhatsApp Image 2025-04-17 at 9.36.05 AM.jpeg",
+  "WhatsApp Image 2025-04-17 at 9.36.06 AM (1).jpeg",
+  "WhatsApp Image 2025-04-17 at 9.36.06 AM.jpeg",
+  "WhatsApp Image 2025-04-17 at 9.36.07 AM (1).jpeg",
+  "WhatsApp Image 2025-04-17 at 9.36.07 AM.jpeg",
   "WhatsApp Video 2025-04-17 at 12.48.12 AM.mp4",
   "WhatsApp Video 2025-04-17 at 12.48.13 AM.mp4",
   "WhatsApp Video 2025-04-17 at 12.48.14 AM.mp4",
   "WhatsApp Video 2025-04-17 at 12.48.15 AM.mp4",
+  "WhatsApp Video 2025-04-17 at 9.36.04 AM.mp4",
+  "WhatsApp Video 2025-04-17 at 9.36.05 AM.mp4",
 ];
 const imagenesExt = ['.jpg', '.jpeg', '.png', '.webp'];
 const videosExt = ['.mp4', '.mov', '.webm'];
