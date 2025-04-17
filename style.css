@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  background: linear-gradient(120deg, #ffe0ec, #ffd6e8);
+  color: #444;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow-x: hidden;
+}
+
+header {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: #ff8fa3;
+  color: white;
+  font-family: 'Pacifico', cursive;
+  font-size: 2rem;
+  animation: fadeIn 2s ease-in-out;
+  position: relative;
+  z-index: 2;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+  flex-grow: 1;
+  animation: fadeInUp 1.5s ease-in-out;
+  position: relative;
+  z-index: 2;
+}
+
+.card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.card img,
+.card video {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  max-height: 400px;
+}
+
+.card video {
+  background: #000;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #ffb3c6;
+  font-style: italic;
+  z-index: 2;
+  position: relative;
+}
+
+/* Corazones animados */
+
+
+.corazones::after {
+  animation-delay: 5s;
+  font-size: 2rem;
+  opacity: 0.1;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(100vh);
+  }
+  100% {
+    transform: translateY(-100vh);
+  }
+}
+
+@media (max-width: 600px) {
+  header {
+    font-size: 1.6rem;
+  }
+}
+.emoji-flotante {
+  position: fixed;
+  z-index: 999; /* Por encima de todo */
+  animation-name: flotarEmoji;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  pointer-events: none;
+  user-select: none;
+  opacity: 0.7;
+}
+
+@keyframes flotarEmoji {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translateY(-50px) rotate(10deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0) rotate(-10deg);
+    opacity: 0.3;
+  }
+}
